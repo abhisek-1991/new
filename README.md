@@ -1,2 +1,0 @@
-# new
-my first repo
