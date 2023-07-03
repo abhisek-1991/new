@@ -1,8 +1,6 @@
-// Get the title element by id and add a black border
-var titleElement = document.getElementById("header-title");
-titleElement.style.border = "1px solid black";
+var items=document.getElementsByClassName('list-group-item');
+items[2].style.backgroundColor='green';
 
-// Get the "Add Items" heading element by class and modify its styling
-var addItemsHeading = document.getElementById("qwe");
-addItemsHeading.style.color = "green";
-addItemsHeading.style.fontWeight = "bold";
+for(var i=0;i<items.length;i++){
+    items[i].style.fontWeight='bold';
+}
