@@ -21,4 +21,23 @@ listItems.forEach(item => {
   editButton.className = "btn btn-primary btn-sm float-right";
   editButton.textContent = "Edit";
   item.appendChild(editButton);
+
+  const description = document.createElement("p");
+  description.textContent = "Description of the item goes here";
+  item.appendChild(description);
+});
+
+// Search functionality
+const searchInput = document.querySelector(".form-control");
+searchInput.addEventListener("input", function() {
+  const searchQuery = searchInput.value.toLowerCase();
+  listItems.forEach(item => {
+    const itemName = item.textContent.toLowerCase();
+    const itemDescription = item.querySelector("p").textContent.toLowerCase();
+    if (itemName.includes(searchQuery) || itemDescription.includes(searchQuery)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
 });
