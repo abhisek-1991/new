@@ -1,18 +1,8 @@
-//var header= document.querySelector('#main-header');
-//header.style.borderBottom= 'solid 4px #ccc';
+// Adding "Hello" before "Item Lister"
+const headerTitle = document.getElementById("header-title");
+headerTitle.textContent = "Hello " + headerTitle.textContent;
 
-var secondItem=document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor='green';
+// Adding "Hello" before "Item 1"
+const item1 = document.querySelector("#items .list-group-item:first-child");
+item1.textContent = "Hello " + item1.textContent;
 
-var thirdItem=document.querySelector('#items li:nth-child(3)');
-thirdItem.style.display='none';
-
-var two= document.querySelectorAll(".list-group-item");
-console.log(two);
-two[1].style.backgroundColor='green';
-
-var odd=document.querySelectorAll('li:nth-child(odd)');
-
-for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor='green';
-}
